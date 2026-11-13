@@ -1,5 +1,5 @@
 ; Inno Setup script for IndustryPlanner (https://jrsoftware.org/isinfo.php)
-; 1. Build the game in Unity to Build\Windows (File > Build Profiles > Windows > Build).
+; 1. Build the game in Unity to My project\Builds (File > Build Profiles > Windows > Build).
 ; 2. Open this file in Inno Setup and press Compile (or run: iscc Installer\IndustryPlanner.iss).
 ; 3. The installer appears in Installer\Output\.
 
@@ -7,7 +7,7 @@
 #define AppVersion "0.0.1"
 #define AppPublisher "Benji"
 #define AppExe "IndustryPlanner.exe"          ; Must match Product Name in Player Settings
-#define BuildDir "..\My project\Build\Windows"
+#define BuildDir "..\My project\Builds"
 
 [Setup]
 AppId={{D053D840-760F-42E0-961E-6F95391A4CEB}
@@ -36,7 +36,7 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{
 
 [Files]
 ; Everything Unity produced: the exe, UnityPlayer.dll, the _Data folder, MonoBleedingEdge...
-Source: "{#BuildDir}\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Excludes: "*_BurstDebugInformation_DoNotShip\*,*_BackUpThisFolder_ButDontShipItWithYourGame\*"
+Source: "{#BuildDir}\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Excludes: "*_BurstDebugInformation_DoNotShip,*_BackUpThisFolder_ButDontShipItWithYourGame"
 
 [Icons]
 Name: "{group}\{#AppName}"; Filename: "{app}\{#AppExe}"
