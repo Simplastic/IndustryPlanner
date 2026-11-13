@@ -9,6 +9,10 @@
 [Mm]emoryCaptures/
 [Rr]ecordings/
 
+# Unity Version Control (Plastic SCM): not needed now that the project is on Git
+.plastic/
+ignore.conf
+
 # IDE / OS files
 .vs/
 .vscode/
