@@ -2,7 +2,7 @@
 
 A node-based production planner for **Satisfactory**, built to plan factories the way you think about them: machines as nodes, belts as links, and live numbers on everything.
 
-> Early version (v0.0.1). Satisfactory 1.0 data. Other games are planned.
+> Early version (v0.0.1). Satisfactory 1.2 data. Other games are planned.
 
 <!-- Add a screenshot or GIF of the editor here: ![Editor](docs/editor.png) -->
 
