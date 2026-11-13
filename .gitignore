@@ -1,0 +1,43 @@
+# Unity: generated folders ()
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+[Mm]emoryCaptures/
+[Rr]ecordings/
+
+# IDE / OS files
+.vs/
+.vscode/
+.idea/
+*.csproj
+*.sln
+*.suo
+*.user
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+.DS_Store
+Thumbs.db
+
+# Unity crash and build reports
+sysinfo.txt
+crashlytics-buildid.txt
+*.apk
+*.aab
+*.unitypackage
+
+# Installer output
+Installer/Output/
+
+# Satisfactory artwork downloaded from the wiki belongs to Coffee Stain Studios.
+# Uncomment to keep it out of a public repository:
+# My project/Assets/Resources/Icons/Satisfactory/Items/
+# My project/Assets/Resources/Icons/Satisfactory/Buildings/

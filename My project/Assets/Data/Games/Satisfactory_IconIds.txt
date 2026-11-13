@@ -1,0 +1,186 @@
+Satisfactory icon ids
+
+Drop PNGs named <id>.png into:
+  Assets/Resources/Icons/Satisfactory/Items/      (items)
+  Assets/Resources/Icons/Satisfactory/Buildings/  (buildings)
+Missing files fall back to coloured placeholder tiles.
+
+BUILDINGS
+Desc_MinerMk1_C	Miner Mk.1
+Desc_MinerMk2_C	Miner Mk.2
+Desc_MinerMk3_C	Miner Mk.3
+Desc_WaterPump_C	Water Extractor
+Desc_OilPump_C	Oil Extractor
+Desc_FrackingExtractor_C	Resource Well Extractor
+Desc_SmelterMk1_C	Smelter
+Desc_FoundryMk1_C	Foundry
+Desc_ConstructorMk1_C	Constructor
+Desc_AssemblerMk1_C	Assembler
+Desc_ManufacturerMk1_C	Manufacturer
+Desc_OilRefinery_C	Refinery
+Desc_Blender_C	Blender
+Desc_Packager_C	Packager
+Desc_HadronCollider_C	Particle Accelerator
+Desc_Converter_C	Converter
+Desc_QuantumEncoder_C	Quantum Encoder
+Desc_GeneratorBiomass_Automated_C	Biomass Burner
+Desc_GeneratorCoal_C	Coal-Powered Generator
+Desc_GeneratorFuel_C	Fuel-Powered Generator
+Desc_GeneratorNuclear_C	Nuclear Power Plant
+IP_Input	Input
+IP_Output	Output
+IP_Bus	Splitter / Merger
+
+ITEMS
+Desc_SpaceElevatorPart_12_C	AI Expansion Server
+Desc_CircuitBoardHighSpeed_C	AI Limiter
+Desc_SpaceElevatorPart_5_C	Adaptive Control Unit
+Desc_AluminumPlate_C	Alclad Aluminum Sheet
+Desc_AlienDNACapsule_C	Alien DNA Capsule
+Desc_AlienPowerFuel_C	Alien Power Matrix
+Desc_AlienProtein_C	Alien Protein
+Desc_AluminaSolution_C	Alumina Solution
+Desc_AluminumCasing_C	Aluminum Casing
+Desc_AluminumIngot_C	Aluminum Ingot
+Desc_AluminumScrap_C	Aluminum Scrap
+Desc_SpaceElevatorPart_7_C	Assembly Director System
+Desc_SpaceElevatorPart_3_C	Automated Wiring
+Desc_SpaceElevatorPart_11_C	Ballistic Warp Drive
+Desc_Battery_C	Battery
+Desc_OreBauxite_C	Bauxite
+Desc_SpaceElevatorPart_10_C	Biochemical Sculptor
+Desc_GenericBiomass_C	Biomass
+Desc_Gunpowder_C	Black Powder
+Desc_Crystal_C	Blue Power Slug
+Desc_Cable_C	Cable
+Desc_GoldIngot_C	Caterium Ingot
+Desc_OreGold_C	Caterium Ore
+Desc_CircuitBoard_C	Circuit Board
+Desc_NobeliskCluster_C	Cluster Nobelisk
+Desc_Coal_C	Coal
+Desc_CompactedCoal_C	Compacted Coal
+Desc_Computer_C	Computer
+Desc_Cement_C	Concrete
+Desc_CoolingSystem_C	Cooling System
+Desc_CopperIngot_C	Copper Ingot
+Desc_OreCopper_C	Copper Ore
+Desc_CopperDust_C	Copper Powder
+Desc_CopperSheet_C	Copper Sheet
+Desc_LiquidOil_C	Crude Oil
+Desc_CrystalOscillator_C	Crystal Oscillator
+Desc_DarkMatter_C	Dark Matter Crystal
+Desc_DarkEnergy_C	Dark Matter Residue
+Desc_Diamond_C	Diamonds
+Desc_DissolvedSilica_C	Dissolved Silica
+Desc_ElectromagneticControlRod_C	Electromagnetic Control Rod
+Desc_FluidCanister_C	Empty Canister
+Desc_GasTank_C	Empty Fluid Tank
+Desc_SteelPlateReinforced_C	Encased Industrial Beam
+Desc_PlutoniumCell_C	Encased Plutonium Cell
+Desc_UraniumCell_C	Encased Uranium Cell
+Desc_QuantumEnergy_C	Excited Photonic Matter
+Desc_Rebar_Explosive_C	Explosive Rebar
+Desc_Fabric_C	Fabric
+Desc_FicsiteIngot_C	Ficsite Ingot
+Desc_FicsiteMesh_C	Ficsite Trigon
+Desc_Ficsonium_C	Ficsonium
+Desc_FicsoniumFuelRod_C	Ficsonium Fuel Rod
+Desc_LiquidFuel_C	Fuel
+Desc_ModularFrameFused_C	Fused Modular Frame
+Desc_Filter_C	Gas Filter
+Desc_NobeliskGas_C	Gas Nobelisk
+Desc_HatcherParts_C	Hatcher Remains
+Desc_AluminumPlateReinforced_C	Heat Sink
+Desc_ModularFrameHeavy_C	Heavy Modular Frame
+Desc_HeavyOilResidue_C	Heavy Oil Residue
+Desc_HighSpeedConnector_C	High-Speed Connector
+Desc_HogParts_C	Hog Remains
+Desc_CartridgeSmartProjectile_C	Homing Rifle Ammo
+Desc_HazmatFilter_C	Iodine-Infused Filter
+Desc_IonizedFuel_C	Ionized Fuel
+Desc_IronIngot_C	Iron Ingot
+Desc_OreIron_C	Iron Ore
+Desc_IronPlate_C	Iron Plate
+Desc_SpikedRebar_C	Iron Rebar
+Desc_IronRod_C	Iron Rod
+Desc_Leaves_C	Leaves
+Desc_Stone_C	Limestone
+Desc_LiquidBiofuel_C	Liquid Biofuel
+Desc_SpaceElevatorPart_6_C	Magnetic Field Generator
+Desc_SpaceElevatorPart_4_C	Modular Engine
+Desc_ModularFrame_C	Modular Frame
+Desc_Motor_C	Motor
+Desc_Mycelia_C	Mycelia
+Desc_TemporalProcessor_C	Neural-Quantum Processor
+Desc_NitricAcid_C	Nitric Acid
+Desc_NitrogenGas_C	Nitrogen Gas
+Desc_NobeliskExplosive_C	Nobelisk
+Desc_NonFissibleUranium_C	Non-Fissile Uranium
+Desc_SpaceElevatorPart_9_C	Nuclear Pasta
+Desc_NobeliskNuke_C	Nuke Nobelisk
+Desc_PackagedAlumina_C	Packaged Alumina Solution
+Desc_Fuel_C	Packaged Fuel
+Desc_PackagedOilResidue_C	Packaged Heavy Oil Residue
+Desc_PackagedIonizedFuel_C	Packaged Ionized Fuel
+Desc_PackagedBiofuel_C	Packaged Liquid Biofuel
+Desc_PackagedNitricAcid_C	Packaged Nitric Acid
+Desc_PackagedNitrogenGas_C	Packaged Nitrogen Gas
+Desc_PackagedOil_C	Packaged Oil
+Desc_PackagedRocketFuel_C	Packaged Rocket Fuel
+Desc_PackagedSulfuricAcid_C	Packaged Sulfuric Acid
+Desc_TurboFuel_C	Packaged Turbofuel
+Desc_PackagedWater_C	Packaged Water
+Desc_PetroleumCoke_C	Petroleum Coke
+Desc_Plastic_C	Plastic
+Desc_PlutoniumFuelRod_C	Plutonium Fuel Rod
+Desc_PlutoniumPellet_C	Plutonium Pellet
+Desc_PlutoniumWaste_C	Plutonium Waste
+Desc_PolymerResin_C	Polymer Resin
+BP_ItemDescriptorPortableMiner_C	Portable Miner
+Desc_CrystalShard_C	Power Shard
+Desc_PressureConversionCube_C	Pressure Conversion Cube
+Desc_NobeliskShockwave_C	Pulse Nobelisk
+Desc_Crystal_mk3_C	Purple Power Slug
+Desc_QuartzCrystal_C	Quartz Crystal
+Desc_HighSpeedWire_C	Quickwire
+Desc_ModularFrameLightweight_C	Radio Control Unit
+Desc_RawQuartz_C	Raw Quartz
+Desc_SAMIngot_C	Reanimated SAM
+Desc_IronPlateReinforced_C	Reinforced Iron Plate
+Desc_CartridgeStandard_C	Rifle Ammo
+Desc_RocketFuel_C	Rocket Fuel
+Desc_Rotor_C	Rotor
+Desc_Rubber_C	Rubber
+Desc_SAM_C	SAM
+Desc_SAMFluctuator_C	SAM Fluctuator
+Desc_IronScrew_C	Screw
+Desc_Rebar_Spreadshot_C	Shatter Rebar
+Desc_Silica_C	Silica
+Desc_SingularityCell_C	Singularity Cell
+Desc_SpaceElevatorPart_1_C	Smart Plating
+Desc_GunpowderMK2_C	Smokeless Powder
+Desc_Biofuel_C	Solid Biofuel
+Desc_SpitterParts_C	Spitter Remains
+Desc_Stator_C	Stator
+Desc_SteelPlate_C	Steel Beam
+Desc_SteelIngot_C	Steel Ingot
+Desc_SteelPipe_C	Steel Pipe
+Desc_StingerParts_C	Stinger Remains
+Desc_Rebar_Stunshot_C	Stun Rebar
+Desc_Sulfur_C	Sulfur
+Desc_SulfuricAcid_C	Sulfuric Acid
+Desc_ComputerSuper_C	Supercomputer
+Desc_QuantumOscillator_C	Superposition Oscillator
+Desc_SpaceElevatorPart_8_C	Thermal Propulsion Rocket
+Desc_TimeCrystal_C	Time Crystal
+Desc_MotorLightweight_C	Turbo Motor
+Desc_CartridgeChaos_C	Turbo Rifle Ammo
+Desc_LiquidTurboFuel_C	Turbofuel
+Desc_OreUranium_C	Uranium
+Desc_NuclearFuelRod_C	Uranium Fuel Rod
+Desc_NuclearWaste_C	Uranium Waste
+Desc_SpaceElevatorPart_2_C	Versatile Framework
+Desc_Water_C	Water
+Desc_Wire_C	Wire
+Desc_Wood_C	Wood
+Desc_Crystal_mk2_C	Yellow Power Slug

@@ -1,0 +1,37 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <ui:Style src="project://database/Assets/UI/Styles/Theme.uss" />
+    <ui:Style src="project://database/Assets/UI/Styles/ProductionCard.uss" />
+    <ui:VisualElement name="productionCard" class="production-card" focusable="true">
+        <ui:VisualElement class="production-card__header">
+            <ui:VisualElement class="production-card__titles">
+                <ui:Label name="cardName" text="Heavy frames, Grass Fields" class="production-card__name t-bold" />
+                <ui:Label name="cardGame" text="Satisfactory" class="production-card__game" />
+            </ui:VisualElement>
+            <!-- Quick actions, shown on hover or keyboard focus. -->
+            <ui:VisualElement class="production-card__actions">
+                <ui:Button name="renameButton" class="btn btn--icon btn--card-action">
+                    <ui:VisualElement class="icon icon--edit" />
+                </ui:Button>
+                <ui:Button name="duplicateButton" class="btn btn--icon btn--card-action">
+                    <ui:VisualElement class="icon icon--copy" />
+                </ui:Button>
+                <ui:Button name="deleteButton" class="btn btn--icon btn--card-action btn--card-delete">
+                    <ui:VisualElement class="icon icon--trash" />
+                </ui:Button>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement class="production-card__ports">
+            <ui:VisualElement name="inputs" class="port-column port-column--in">
+                <ui:Label text="Inputs" class="port-column__heading t-medium" />
+            </ui:VisualElement>
+            <ui:VisualElement name="outputs" class="port-column port-column--out">
+                <ui:Label text="Outputs" class="port-column__heading t-medium" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement class="production-card__meta">
+            <ui:Label name="nodeCount" text="38 nodes" class="meta" />
+            <ui:Label name="power" text="1,312 MW" class="meta" />
+            <ui:Label name="edited" text="Edited 2 days ago" class="meta meta--edited" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

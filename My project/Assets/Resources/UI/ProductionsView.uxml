@@ -1,0 +1,48 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:ip="IndustryPlanner.UI" editor-extension-mode="False">
+    <ui:Style src="project://database/Assets/UI/Styles/Theme.uss" />
+    <ui:Style src="project://database/Assets/UI/Styles/HomeScreen.uss" />
+    <!-- Home (latest designs, all games) and per-game production lists. -->
+    <ui:VisualElement class="main">
+        <ui:VisualElement class="header">
+            <ui:VisualElement class="header__titles">
+                <ui:Label name="pageTitle" text="Latest designs" class="header__title t-bold" />
+                <ui:Label name="productionCount" text="6 saved" class="header__count t-medium" />
+            </ui:VisualElement>
+            <ui:VisualElement class="header__actions">
+                <ui:Button name="newProductionButton" class="btn btn--primary">
+                    <ui:VisualElement class="icon icon--plus" />
+                    <ui:Label text="New production" class="btn__label t-semibold" />
+                </ui:Button>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <!-- Search, sort and layout. Sort buttons are built in ProductionsView.cs. -->
+        <ui:VisualElement class="toolbar">
+            <ui:VisualElement class="toolbar__search">
+                <ui:VisualElement class="icon icon--search" />
+                <ui:TextField name="searchField" class="toolbar__search-field" />
+            </ui:VisualElement>
+            <ui:VisualElement name="sortGroup" class="segmented segmented--inline toolbar__sort" />
+            <ui:VisualElement class="toolbar__spacer" />
+            <ui:Button name="gridViewButton" class="btn btn--icon toolbar__view">
+                <ui:VisualElement class="icon icon--games" />
+            </ui:Button>
+            <ui:Button name="listViewButton" class="btn btn--icon toolbar__view">
+                <ui:VisualElement class="icon icon--list" />
+            </ui:Button>
+        </ui:VisualElement>
+        <ui:VisualElement class="canvas">
+            <ip:DotGridBackground picking-mode="Ignore" class="dot-grid" />
+            <ui:ScrollView name="productionList" mode="Vertical" horizontal-scroller-visibility="Hidden" class="card-grid" />
+            <ui:VisualElement name="emptyState" class="empty-state is-hidden">
+                <ui:VisualElement class="empty-state__panel">
+                    <ui:Label name="emptyTitle" text="No productions yet" class="empty-state__title t-bold" />
+                    <ui:Label text="Create one to start laying out your factory." class="empty-state__body" />
+                    <ui:Button name="emptyCreateButton" class="btn btn--primary">
+                        <ui:VisualElement class="icon icon--plus" />
+                        <ui:Label text="New production" class="btn__label t-semibold" />
+                    </ui:Button>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

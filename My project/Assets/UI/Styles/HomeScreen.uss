@@ -1,0 +1,446 @@
+.app {
+    flex-direction: row;
+}
+
+/* ---------- Main column ---------- */
+
+.content {
+    flex-grow: 1;
+}
+
+.main {
+    flex-grow: 1;
+}
+
+.header {
+    flex-shrink: 0;
+    flex-direction: row;
+    align-items: center;
+    height: 68px;
+    padding: 0 28px;
+    background-color: var(--panel);
+    border-bottom-width: 1px;
+    border-bottom-color: var(--line);
+}
+
+.header__titles {
+    flex-grow: 1;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header__title {
+    font-size: 26px;
+}
+
+.header__count {
+    margin-left: 12px;
+    padding-top: 4px;
+    font-size: 16px;
+    color: var(--text-muted);
+}
+
+.header__actions {
+    flex-direction: row;
+    align-items: center;
+}
+
+.app .header__settings {
+    margin-left: 10px;
+}
+
+/* The canvas reuses the node editor's dotted background, so home and editor feel like one space. */
+/* Search, sort and grid/list toggle under the header. */
+.toolbar {
+    flex-shrink: 0;
+    flex-direction: row;
+    align-items: center;
+    padding: 12px 28px;
+    border-bottom-width: 1px;
+    border-bottom-color: var(--line);
+    background-color: var(--panel);
+}
+
+.toolbar__search {
+    flex-direction: row;
+    align-items: center;
+    width: 320px;
+    padding-left: 10px;
+    background-color: var(--bg);
+    border-width: 1px;
+    border-color: var(--line);
+    border-radius: 4px;
+}
+
+.toolbar__search-field {
+    flex-grow: 1;
+}
+
+.app .toolbar__search-field > .unity-base-text-field__input {
+    border-width: 0;
+    background-color: transparent;
+}
+
+.toolbar__sort {
+    margin-left: 16px;
+}
+
+.app .toolbar__sort > .segment {
+    margin-bottom: 0;
+}
+
+.toolbar__spacer {
+    flex-grow: 1;
+}
+
+.app .toolbar__view {
+    margin-left: 6px;
+}
+
+.card-grid__none {
+    margin: 8px 0;
+    color: var(--text-muted);
+}
+
+.canvas {
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.dot-grid {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    --dot-color: rgba(255, 255, 255, 0.07);
+    --dot-spacing: 24;
+    --dot-size: 2;
+}
+
+.card-grid {
+    flex-grow: 1;
+}
+
+.card-grid .unity-scroll-view__content-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 28px 8px 8px 28px;
+}
+
+.card-grid .unity-scroller--vertical {
+    width: 10px;
+    border-width: 0;
+    background-color: transparent;
+}
+
+.card-grid .unity-scroller__low-button,
+.card-grid .unity-scroller__high-button {
+    display: none;
+}
+
+.card-grid .unity-base-slider__tracker {
+    background-color: transparent;
+    border-width: 0;
+}
+
+.card-grid .unity-base-slider__dragger {
+    background-color: var(--line-strong);
+    border-width: 0;
+    border-radius: 4px;
+}
+
+.empty-state {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.empty-state__panel {
+    align-items: center;
+    padding: 32px 40px;
+    background-color: var(--panel);
+    border-width: 1px;
+    border-color: var(--line);
+    border-radius: 6px;
+}
+
+.empty-state__title {
+    font-size: 22px;
+}
+
+.empty-state__body {
+    margin: 6px 0 20px 0;
+    font-size: 16px;
+    color: var(--text-muted);
+}
+
+/* ---------- Sidebar (right) ---------- */
+
+.sidebar {
+    flex-shrink: 0;
+    width: 248px;
+    padding: 0 16px 20px 16px;
+    background-color: var(--panel);
+    border-right-width: 1px;
+    border-right-color: var(--line);
+    overflow: hidden;
+    transition-duration: 220ms;
+    transition-timing-function: ease-out-cubic;
+}
+
+/* The editor is full screen: the sidebar folds away. */
+.sidebar--hidden {
+    width: 0;
+    padding-left: 0;
+    padding-right: 0;
+    border-right-width: 0;
+}
+
+.sidebar__spacer {
+    flex-grow: 1;
+}
+
+.brand {
+    flex-direction: row;
+    align-items: center;
+    height: 68px;
+    margin: 0 -16px 16px -16px;
+    padding: 0 16px;
+    border-bottom-width: 1px;
+    border-bottom-color: var(--line);
+}
+
+.brand__mark {
+    width: 22px;
+    height: 22px;
+    margin-right: 10px;
+    background-image: url("project://database/Assets/Art/Icons/UI/LogoMark.svg");
+    -unity-background-image-tint-color: var(--accent);
+}
+
+.brand__name {
+    font-size: 22px;
+}
+
+.brand__version {
+    margin-left: 6px;
+    padding-top: 4px;
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+.app .nav-item {
+    margin: 0 0 4px 0;
+    height: 40px;
+    padding: 0 12px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: transparent;
+    border-width: 0;
+    border-left-width: 3px;
+    border-left-color: transparent;
+    border-radius: 0 4px 4px 0;
+    color: var(--text-muted);
+    font-size: 17px;
+    -unity-text-align: middle-left;
+    transition-duration: 120ms;
+}
+
+.app .nav-item:hover {
+    background-color: var(--surface);
+    color: var(--text);
+}
+
+.app .nav-item--active {
+    background-color: var(--surface);
+    border-left-color: var(--accent);
+    color: var(--text);
+}
+
+.app .nav-item:focus {
+    border-left-color: var(--text);
+}
+
+.nav-item > .icon {
+    margin-right: 10px;
+}
+
+.nav-item--active > .icon {
+    -unity-background-image-tint-color: var(--text);
+}
+
+.sidebar__heading {
+    margin: 24px 12px 8px 12px;
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+.sidebar__note {
+    margin: 4px 12px 0 12px;
+    font-size: 14px;
+    color: var(--text-faint);
+    white-space: normal;
+}
+
+/* ---------- Games view ---------- */
+
+.game-card {
+    width: 360px;
+    margin: 0 20px 20px 0;
+    background-color: var(--surface);
+    border-width: 1px;
+    border-color: var(--line);
+    border-radius: 4px;
+    overflow: hidden;
+    transition-duration: 150ms;
+}
+
+.game-card:hover {
+    border-color: var(--line-strong);
+}
+
+.game-card:focus {
+    border-color: var(--accent);
+}
+
+.game-card__banner {
+    height: 120px;
+    padding: 24px;
+    justify-content: center;
+    background-color: var(--accent);
+}
+
+.game-card__logo {
+    flex-grow: 1;
+    background-size: contain;
+    background-repeat: no-repeat;
+    -unity-background-image-tint-color: var(--accent-ink);
+}
+
+.game-card__body {
+    padding: 16px;
+}
+
+.game-card__name {
+    font-size: 22px;
+}
+
+.game-card__version {
+    margin-top: 2px;
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+.game-card__tagline {
+    margin-top: 4px;
+    white-space: normal;
+    color: var(--text-muted);
+}
+
+.game-card__count {
+    margin-top: 12px;
+    color: var(--text-muted);
+}
+
+.game-card__actions {
+    flex-direction: row;
+    margin-top: 16px;
+}
+
+.app .game-card__new {
+    margin-left: 10px;
+}
+
+/* ---------- Settings view ---------- */
+
+.settings {
+    flex-grow: 1;
+}
+
+.settings .unity-scroll-view__content-container {
+    align-items: center;
+    padding: 28px;
+}
+
+.settings__column {
+    width: 100%;
+    max-width: 720px;
+}
+
+.settings__section {
+    margin-bottom: 32px;
+    padding: 20px;
+    background-color: var(--surface);
+    border-width: 1px;
+    border-color: var(--line);
+    border-radius: 6px;
+}
+
+.settings__title {
+    margin-bottom: 12px;
+    font-size: 21px;
+}
+
+.settings__group {
+    margin: 16px 0 6px 0;
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+.settings__actions {
+    flex-direction: row;
+    margin-top: 16px;
+}
+
+.settings-row {
+    flex-direction: row;
+    align-items: center;
+    min-height: 52px;
+    border-bottom-width: 1px;
+    border-bottom-color: var(--line);
+}
+
+.settings-row--compact {
+    min-height: 40px;
+}
+
+.settings-row__texts {
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin-right: 16px;
+}
+
+.settings-row__label {
+    flex-grow: 1;
+    font-size: 16px;
+}
+
+.settings-row__hint {
+    font-size: 14px;
+    color: var(--text-muted);
+    white-space: normal;
+}
+
+.app .key-button {
+    min-width: 120px;
+    height: 32px;
+}
+
+.app .key-button--listening {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.segmented--inline {
+    flex-grow: 0;
+}
+
+.app .segmented--inline > .segment {
+    padding: 0 14px;
+}

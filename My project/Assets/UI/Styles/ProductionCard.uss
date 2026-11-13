@@ -1,0 +1,206 @@
+/* A production card is drawn like a node from the editor: inputs on the left edge, outputs on the right. */
+.production-card {
+    width: 340px;
+    margin: 0 20px 20px 0;
+    background-color: var(--surface);
+    border-width: 1px;
+    border-color: var(--line);
+    border-top-width: 3px;
+    border-top-color: var(--accent);
+    border-radius: 4px;
+    transition-duration: 180ms;
+    transition-timing-function: ease-out-cubic;
+}
+
+.production-card:hover {
+    border-color: var(--line-strong);
+    border-top-color: var(--accent);
+}
+
+.production-card:focus {
+    border-color: var(--accent);
+}
+
+.production-card--entering {
+    opacity: 0;
+    translate: 0 8px;
+}
+
+.production-card__header {
+    flex-direction: row;
+    align-items: center;
+    padding: 8px 8px 8px 14px;
+    background-color: var(--surface-raised);
+}
+
+.production-card__titles {
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.production-card__game {
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+.production-card__name {
+    font-size: 19px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Quick actions fade in on hover or keyboard focus, so the cards stay calm at rest. */
+.production-card__actions {
+    flex-direction: row;
+    margin-left: 8px;
+    opacity: 0;
+    transition-duration: 120ms;
+}
+
+.production-card:hover .production-card__actions,
+.production-card:focus .production-card__actions {
+    opacity: 1;
+}
+
+.app .btn--card-action {
+    width: 30px;
+    height: 30px;
+    margin-left: 2px;
+    border-color: transparent;
+}
+
+.btn--card-action > .icon {
+    width: 16px;
+    height: 16px;
+}
+
+.btn--card-delete:hover > .icon {
+    -unity-background-image-tint-color: var(--danger);
+}
+
+/* Compact list: one row per production, ports hidden. */
+.card-grid--list .production-card {
+    width: 100%;
+    margin-right: 20px;
+    margin-bottom: 8px;
+    flex-direction: row;
+    align-items: center;
+    border-top-width: 1px;
+    border-left-width: 3px;
+    border-left-color: var(--accent);
+}
+
+.card-grid--list .production-card__header {
+    flex-grow: 1;
+    background-color: transparent;
+}
+
+.card-grid--list .production-card__ports {
+    display: none;
+}
+
+.card-grid--list .production-card__meta {
+    width: 380px;
+    border-top-width: 0;
+}
+
+.production-card__ports {
+    flex-grow: 1;
+    flex-direction: row;
+    padding: 12px 14px 14px 14px;
+}
+
+.port-column {
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+.port-column--out {
+    margin-left: 16px;
+    align-items: flex-end;
+}
+
+.port-column__heading {
+    margin-bottom: 6px;
+    font-size: 13px;
+    color: var(--text-faint);
+}
+
+.port-row {
+    flex-direction: row;
+    align-items: center;
+    align-self: stretch;
+    height: 22px;
+}
+
+.port-row--out {
+    justify-content: flex-end;
+}
+
+.port-row__item {
+    flex-shrink: 1;
+    font-size: 15px;
+    color: var(--text-muted);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.port-row__rate {
+    flex-shrink: 0;
+    margin-left: 6px;
+    font-size: 15px;
+}
+
+.port-row--out > .port-row__rate {
+    color: var(--accent);
+}
+
+/* Sits on the card's outer edge: 14px padding + 1px border + half the dot. */
+.port-dot {
+    position: absolute;
+    top: 6px;
+    width: 10px;
+    height: 10px;
+    border-width: 2px;
+    border-radius: 5px;
+    border-color: var(--line-strong);
+    background-color: var(--surface);
+}
+
+.port-row--in > .port-dot {
+    left: -20px;
+}
+
+.port-row--out > .port-dot {
+    right: -20px;
+    border-color: var(--accent);
+    background-color: var(--accent);
+}
+
+.port-more {
+    margin-top: 2px;
+    font-size: 13px;
+    color: var(--text-faint);
+}
+
+.production-card__meta {
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 14px;
+    border-top-width: 1px;
+    border-top-color: var(--line);
+}
+
+.meta {
+    margin-right: 16px;
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+.meta--edited {
+    flex-grow: 1;
+    margin-right: 0;
+    -unity-text-align: middle-right;
+}

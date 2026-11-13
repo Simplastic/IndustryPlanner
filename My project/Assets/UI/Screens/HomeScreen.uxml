@@ -1,0 +1,33 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <ui:Style src="project://database/Assets/UI/Styles/Theme.uss" />
+    <ui:Style src="project://database/Assets/UI/Styles/HomeScreen.uss" />
+    <ui:Style src="project://database/Assets/UI/Styles/ProductionCard.uss" />
+    <ui:Style src="project://database/Assets/UI/Styles/GraphEditor.uss" />
+    <!-- App shell: sidebar on the left, the active view goes in "content" (see AppController). -->
+    <ui:VisualElement name="app" class="app theme-satisfactory">
+        <ui:VisualElement name="sidebar" class="sidebar">
+            <ui:VisualElement class="brand">
+                <ui:Label text="IndustryPlanner" class="brand__name t-bold" />
+                <ui:Label name="versionLabel" text="v0.0.1" class="brand__version t-medium" />
+            </ui:VisualElement>
+            <ui:Button name="homeNav" class="nav-item nav-item--active">
+                <ui:VisualElement class="icon icon--home" />
+                <ui:Label text="Home" class="t-semibold" />
+            </ui:Button>
+            <ui:Button name="gamesNav" class="nav-item">
+                <ui:VisualElement class="icon icon--games" />
+                <ui:Label text="Games" class="t-semibold" />
+            </ui:Button>
+            <ui:VisualElement class="sidebar__spacer" />
+            <ui:Button name="settingsNav" class="nav-item">
+                <ui:VisualElement class="icon icon--settings" />
+                <ui:Label text="Settings" class="t-semibold" />
+            </ui:Button>
+        </ui:VisualElement>
+        <ui:VisualElement name="content" class="content" />
+        <ui:VisualElement name="toast" class="toast toast--hidden">
+            <ui:Label name="toastText" class="toast__text" />
+            <ui:Button name="toastAction" text="Undo" class="btn toast__action t-semibold" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

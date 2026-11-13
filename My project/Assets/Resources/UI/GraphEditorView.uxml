@@ -1,0 +1,38 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <ui:Style src="project://database/Assets/UI/Styles/Theme.uss" />
+    <ui:Style src="project://database/Assets/UI/Styles/GraphEditor.uss" />
+    <!-- Full-screen editor. The canvas, hotbar and picker are created in code inside canvasHost. -->
+    <ui:VisualElement class="editor">
+        <ui:VisualElement class="editor-bar">
+            <ui:Button name="backButton" class="btn btn--icon">
+                <ui:VisualElement class="icon icon--back" />
+            </ui:Button>
+            <ui:TextField name="nameField" class="editor-bar__name" />
+            <ui:Label name="gameLabel" text="Satisfactory" class="editor-bar__game" />
+            <ui:Button name="tierButton" text="Tier 4" class="btn btn--secondary editor-bar__tier t-semibold" />
+            <ui:VisualElement class="editor-bar__spacer" />
+            <ui:Label name="saveState" text="Saved" class="editor-bar__state" />
+            <ui:Button name="snapButton" class="btn btn--icon editor-bar__snap">
+                <ui:VisualElement class="icon icon--grid" />
+            </ui:Button>
+            <ui:Button name="saveButton" text="Save" class="btn btn--secondary t-semibold" />
+            <ui:Button name="panelButton" class="btn btn--icon editor-bar__panel">
+                <ui:VisualElement class="icon icon--panel" />
+            </ui:Button>
+            <ui:Button name="settingsButton" class="btn btn--icon editor-bar__panel">
+                <ui:VisualElement class="icon icon--settings" />
+            </ui:Button>
+        </ui:VisualElement>
+        <ui:VisualElement class="editor-body">
+            <ui:VisualElement name="canvasHost" class="canvas-host" />
+            <ui:VisualElement name="sidePanel" class="side-panel">
+                <ui:VisualElement class="side-panel__tabs">
+                    <ui:Button name="tabSelection" text="Selection" class="tab tab--active t-semibold" />
+                    <ui:Button name="tabAnalysis" text="Analysis" class="tab t-semibold" />
+                    <ui:Button name="tabBlueprints" text="Blueprints" class="tab t-semibold" />
+                </ui:VisualElement>
+                <ui:ScrollView name="panelBody" mode="Vertical" horizontal-scroller-visibility="Hidden" class="side-panel__body" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

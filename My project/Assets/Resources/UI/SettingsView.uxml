@@ -1,0 +1,13 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <ui:Style src="project://database/Assets/UI/Styles/Theme.uss" />
+    <ui:Style src="project://database/Assets/UI/Styles/HomeScreen.uss" />
+    <!-- Sections are built in SettingsView.cs. -->
+    <ui:VisualElement class="main">
+        <ui:VisualElement class="header">
+            <ui:VisualElement class="header__titles">
+                <ui:Label text="Settings" class="header__title t-bold" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:ScrollView name="settingsBody" mode="Vertical" horizontal-scroller-visibility="Hidden" class="settings" />
+    </ui:VisualElement>
+</ui:UXML>

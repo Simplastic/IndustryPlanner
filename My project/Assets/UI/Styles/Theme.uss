@@ -1,0 +1,517 @@
+:root {
+    --bg: #1C1F22;
+    --panel: #24282C;
+    --surface: #2D3237;
+    --surface-raised: #353B41;
+    --line: #3E454C;
+    --line-strong: #56606A;
+    --text: #E8EAEC;
+    --text-muted: #9AA3AC;
+    --text-faint: #75808A;
+    --accent: #FF8D00;
+    --accent-hover: #FFA233;
+    --accent-ink: #1C1F22;
+    --danger: #F06258;
+    --fluid: #5FA8D3;
+}
+
+/* One class per game, set on .app by HomeScreenController. Add a block here for each new game. */
+.theme-satisfactory {
+    --accent: #FF8D00;
+    --accent-hover: #FFA233;
+    --accent-ink: #1C1F22;
+}
+
+.app {
+    flex-grow: 1;
+    background-color: var(--bg);
+    color: var(--text);
+    font-size: 15px;
+    -unity-font-definition: url("project://database/Assets/Art/Fonts/Rajdhani/Rajdhani-Regular%20SDF.asset");
+}
+
+/* Reset Unity's default label spacing. Kept at class specificity so any label class below can set its own
+   margins (".app Label" would outrank them and silently zero every label margin). */
+.unity-label {
+    margin: 0;
+    padding: 0;
+}
+
+.t-medium {
+    -unity-font-definition: url("project://database/Assets/Art/Fonts/Rajdhani/Rajdhani-Medium%20SDF.asset");
+}
+
+.t-semibold {
+    -unity-font-definition: url("project://database/Assets/Art/Fonts/Rajdhani/Rajdhani-SemiBold%20SDF.asset");
+}
+
+.t-bold {
+    -unity-font-definition: url("project://database/Assets/Art/Fonts/Rajdhani/Rajdhani-Bold%20SDF.asset");
+}
+
+/* Buttons. Prefixed with .app so they win over the default runtime theme's .unity-button rules. */
+.app .btn {
+    margin: 0;
+    padding: 0 16px;
+    height: 36px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-width: 1px;
+    border-radius: 4px;
+    font-size: 16px;
+    transition-duration: 120ms;
+}
+
+.app .btn--primary {
+    background-color: var(--accent);
+    border-color: var(--accent);
+    color: var(--accent-ink);
+}
+
+.app .btn--primary:hover {
+    background-color: var(--accent-hover);
+    border-color: var(--accent-hover);
+}
+
+.app .btn--primary:hover:active {
+    background-color: var(--accent);
+    border-color: var(--accent);
+}
+
+.app .btn--icon {
+    width: 36px;
+    padding: 0;
+    background-color: transparent;
+    border-color: var(--line);
+}
+
+.app .btn--icon:hover {
+    background-color: var(--surface-raised);
+    border-color: var(--line-strong);
+}
+
+.app .btn--icon:hover:active {
+    background-color: var(--surface);
+}
+
+.app .btn--secondary {
+    background-color: transparent;
+    border-color: var(--line-strong);
+    color: var(--text);
+}
+
+.app .btn--secondary:hover {
+    background-color: var(--surface-raised);
+}
+
+.app .btn--danger {
+    background-color: transparent;
+    border-color: var(--danger);
+    color: var(--danger);
+}
+
+.app .btn--danger:hover {
+    background-color: rgba(240, 98, 88, 0.12);
+}
+
+.app .btn:focus {
+    border-color: var(--text);
+}
+
+.btn__label {
+    -unity-text-align: middle-left;
+}
+
+/* Icons are white SVGs; colour comes from the tint. */
+.icon {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    -unity-background-image-tint-color: var(--text-muted);
+}
+
+.btn--primary > .icon {
+    margin-right: 8px;
+    -unity-background-image-tint-color: var(--accent-ink);
+}
+
+.btn--icon:hover > .icon {
+    -unity-background-image-tint-color: var(--text);
+}
+
+.icon--plus {
+    width: 14px;
+    height: 14px;
+    background-image: url("project://database/Assets/Art/Icons/UI/Plus.svg");
+}
+
+.icon--settings {
+    background-image: url("project://database/Assets/Art/Icons/UI/Settings.svg");
+}
+
+.icon--home {
+    background-image: url("project://database/Assets/Art/Icons/UI/Home.svg");
+}
+
+.icon--games {
+    background-image: url("project://database/Assets/Art/Icons/UI/Games.svg");
+}
+
+.icon--back {
+    background-image: url("project://database/Assets/Art/Icons/UI/ArrowLeft.svg");
+}
+
+.icon--grid {
+    background-image: url("project://database/Assets/Art/Icons/UI/Grid.svg");
+}
+
+.icon--edit {
+    background-image: url("project://database/Assets/Art/Icons/UI/Edit.png");
+}
+
+.icon--copy {
+    background-image: url("project://database/Assets/Art/Icons/UI/Copy.png");
+}
+
+.icon--trash {
+    background-image: url("project://database/Assets/Art/Icons/UI/Trash.png");
+}
+
+.icon--list {
+    background-image: url("project://database/Assets/Art/Icons/UI/List.png");
+}
+
+.icon--search {
+    background-image: url("project://database/Assets/Art/Icons/UI/Search.png");
+}
+
+.icon--panel {
+    background-image: url("project://database/Assets/Art/Icons/UI/Panel.svg");
+}
+
+.is-hidden {
+    display: none;
+}
+
+.view {
+    flex-grow: 1;
+    transition-duration: 220ms;
+    transition-timing-function: ease-out-cubic;
+}
+
+/* Screen change: the new view fades and slides up into place. */
+.view--enter {
+    opacity: 0;
+    translate: 0 10px;
+}
+
+/* Text inputs (TextField, FloatField). */
+.app .unity-base-field {
+    margin: 0;
+}
+
+.app .unity-base-field__label {
+    min-width: 0;
+    color: var(--text-muted);
+}
+
+.app .unity-base-text-field__input {
+    padding: 4px 8px;
+    background-color: var(--bg);
+    border-width: 1px;
+    border-color: var(--line);
+    border-radius: 4px;
+    color: var(--text);
+    font-size: 15px;
+}
+
+.app .unity-base-field:focus > .unity-base-text-field__input {
+    border-color: var(--accent);
+}
+
+/* Placeholder text is dimmed so it never reads as a typed value. */
+.app .unity-base-text-field__input--placeholder,
+.app .unity-base-text-field__input--placeholder .unity-text-element {
+    color: var(--text-faint);
+}
+
+/* Placeholder icon tiles: colour and initials come from the id until real art is added. */
+.icon-tile {
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.icon-tile--s {
+    width: 18px;
+    height: 18px;
+}
+
+.icon-tile--m {
+    width: 28px;
+    height: 28px;
+}
+
+.icon-tile--l {
+    width: 40px;
+    height: 40px;
+}
+
+.icon-tile__initials {
+    font-size: 9px;
+    color: rgba(255, 255, 255, 0.9);
+    -unity-font-definition: url("project://database/Assets/Art/Fonts/Rajdhani/Rajdhani-Bold%20SDF.asset");
+}
+
+.icon-tile--m > .icon-tile__initials {
+    font-size: 12px;
+}
+
+.icon-tile--l > .icon-tile__initials {
+    font-size: 15px;
+}
+
+/* Context menus and confirmations (see Popup.cs). */
+.popup-layer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.popup-menu {
+    position: absolute;
+    transition-duration: 120ms;
+    min-width: 180px;
+    padding: 4px;
+    background-color: var(--surface-raised);
+    border-width: 1px;
+    border-color: var(--line-strong);
+    border-radius: 4px;
+}
+
+.popup-menu--enter {
+    opacity: 0;
+    translate: 0 -4px;
+}
+
+.popup-menu__message {
+    max-width: 260px;
+    margin: 6px 8px;
+    white-space: normal;
+    color: var(--text-muted);
+}
+
+.app .popup-menu__item {
+    margin: 0;
+    height: 32px;
+    padding: 0 10px;
+    background-color: transparent;
+    border-width: 0;
+    color: var(--text);
+    font-size: 15px;
+    -unity-text-align: middle-left;
+}
+
+.app .popup-menu__item:hover {
+    background-color: var(--surface);
+}
+
+.app .popup-menu__item--danger {
+    color: var(--danger);
+}
+
+.toast {
+    position: absolute;
+    top: 72px;
+    left: 50%;
+    translate: -50% 0;
+    transition-duration: 180ms;
+}
+
+.toast {
+    flex-direction: row;
+    align-items: center;
+}
+
+.app .toast__action {
+    margin: 0 -8px 0 16px;
+    height: 28px;
+    padding: 0 10px;
+    background-color: transparent;
+    border-width: 0;
+    color: var(--accent);
+}
+
+.app .toast__action:hover {
+    background-color: var(--surface);
+}
+
+/* Hidden toasts must not catch clicks. */
+.toast--hidden {
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    translate: -50% -8px;
+    padding: 8px 16px;
+    background-color: var(--surface-raised);
+    border-width: 1px;
+    border-color: var(--line-strong);
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+/* Icon buttons that represent an on/off state (e.g. snap to grid). */
+.app .btn--toggled {
+    border-color: var(--accent);
+}
+
+.btn--toggled > .icon {
+    -unity-background-image-tint-color: var(--accent);
+}
+
+/* On/off switch used in Settings. */
+.app .switch {
+    flex-shrink: 0;
+    width: 44px;
+    height: 24px;
+    margin: 0;
+    padding: 0;
+    background-color: var(--line);
+    border-width: 0;
+    border-radius: 12px;
+    transition-duration: 150ms;
+}
+
+.app .switch--on {
+    background-color: var(--accent);
+}
+
+.switch__knob {
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    width: 18px;
+    height: 18px;
+    border-radius: 9px;
+    background-color: var(--text);
+    transition-duration: 150ms;
+    transition-timing-function: ease-out-cubic;
+}
+
+.switch--on > .switch__knob {
+    translate: 20px 0;
+    background-color: var(--accent-ink);
+}
+
+/* Modal dialogs (Dialog.Show / Dialog.Prompt). */
+.dialog-layer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition-duration: 150ms;
+}
+
+.dialog-layer--enter {
+    opacity: 0;
+}
+
+.dialog {
+    width: 480px;
+    padding: 20px 24px;
+    background-color: var(--panel);
+    border-width: 1px;
+    border-color: var(--line-strong);
+    border-radius: 6px;
+    transition-duration: 180ms;
+    transition-timing-function: ease-out-cubic;
+}
+
+.dialog-layer--enter > .dialog {
+    translate: 0 12px;
+}
+
+.dialog__title {
+    margin-bottom: 12px;
+    font-size: 22px;
+}
+
+.dialog__label {
+    margin: 14px 0 6px 0;
+    color: var(--text-muted);
+}
+
+.dialog__hint {
+    margin-top: 8px;
+    color: var(--text-muted);
+    white-space: normal;
+}
+
+.dialog__choices {
+    flex-direction: row;
+}
+
+.dialog__choices--wrap {
+    flex-wrap: wrap;
+}
+
+.dialog__switch-row {
+    flex-direction: row;
+    align-items: center;
+    margin-top: 16px;
+}
+
+.dialog__switch-label {
+    flex-grow: 1;
+}
+
+.dialog__actions {
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: 24px;
+}
+
+.app .dialog__confirm {
+    margin-left: 10px;
+}
+
+/* Segmented choice buttons, shared by dialogs, settings and the side panel. */
+.segmented {
+    flex-grow: 1;
+    flex-direction: row;
+}
+
+.app .segment {
+    flex-grow: 1;
+    height: 32px;
+    padding: 0 10px;
+    margin: 0 4px 4px 0;
+    background-color: transparent;
+    border-color: var(--line);
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+.app .segment:hover {
+    background-color: var(--surface-raised);
+}
+
+.app .segment--active {
+    border-color: var(--accent);
+    color: var(--text);
+}
+
+.app .segment--square {
+    flex-grow: 0;
+    width: 40px;
+}

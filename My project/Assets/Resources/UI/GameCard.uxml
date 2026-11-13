@@ -1,0 +1,22 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <ui:Style src="project://database/Assets/UI/Styles/Theme.uss" />
+    <ui:Style src="project://database/Assets/UI/Styles/HomeScreen.uss" />
+    <ui:VisualElement name="gameCard" class="game-card" focusable="true">
+        <ui:VisualElement class="game-card__banner">
+            <ui:VisualElement name="logo" class="game-card__logo" />
+        </ui:VisualElement>
+        <ui:VisualElement class="game-card__body">
+            <ui:Label name="gameName" text="Satisfactory" class="game-card__name t-bold" />
+            <ui:Label name="version" text="Game version 1.0" class="game-card__version" />
+            <ui:Label name="tagline" text="Plan factories from your first miner to Project Assembly." class="game-card__tagline" />
+            <ui:Label name="count" text="6 productions" class="game-card__count t-medium" />
+            <ui:VisualElement class="game-card__actions">
+                <ui:Button name="viewButton" text="View productions" class="btn btn--secondary t-semibold" />
+                <ui:Button name="newButton" class="btn btn--primary game-card__new">
+                    <ui:VisualElement class="icon icon--plus" />
+                    <ui:Label text="New production" class="btn__label t-semibold" />
+                </ui:Button>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
